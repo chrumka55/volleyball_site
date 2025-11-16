@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galéria – Volejbal | chrumka55</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      background: #0a0a0a;
+      color: #fff;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      padding: 40px 20px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 3.2rem;
+      margin-bottom: 60px;
+      background: linear-gradient(90deg, #ff6b35, #f7931e, #ffd23f);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 28px;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 18px;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.8);
+      transition: all 0.5s ease;
+    }
+    .gallery img:hover {
+      transform: translateY(-15px) scale(1.03);
+      box-shadow: 0 25px 50px rgba(255, 107, 53, 0.4);
+    }
+    footer {
+      text-align: center;
+      margin-top: 100px;
+      padding: 30px;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    @media (max-width: 600px) {
+      h1 { font-size: 2.4rem; }
+      .gallery { gap: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Volejbalová Galéria</h1>
+
+  <div class="gallery">
+    <img src="https://i.imgur.com/0tR2j1l.jpeg" alt="Plážový volejbal Mikasa">
+    <img src="https://i.imgur.com/9kP8L2m.jpeg" alt="Plážový volejbal smeč">
+    <img src="https://i.imgur.com/3jR9pZk.jpeg" alt="Halový volejbal blok">
+    <img src="https://i.imgur.com/8mN5vXc.jpeg" alt="Halový volejbal čiernobiely">
+    <img src="https://i.imgur.com/4pL7qWs.jpeg" alt="Halový volejbal smeč">
+    <img src="https://i.imgur.com/6hJ9kLm.jpeg" alt="Plážový volejbal farebný filter">
+    <img src="https://i.imgur.com/2vX8nYp.jpeg" alt="Ženský plážový volejbal">
+    <img src="https://i.imgur.com/1fG5hRt.jpeg" alt="Ženský plážový volejbal čiernobiely">
+    <img src="https://i.imgur.com/7bN3mKp.jpeg" alt="Beach vs Indoor porovnanie">
+    <img src="https://i.imgur.com/5cR4tYv.jpeg" alt="Ženský plážový volejbal prihrávka">
+  </div>
+
+  <footer>
+    © 2025 chrumka55 – Volejbalová galéria
+  </footer>
+
+</body>
+</html>
