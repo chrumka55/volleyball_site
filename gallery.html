@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Galéria - Volejbal</title>
-  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="styles.css" />
   <style>
     /* Small gallery-specific tweaks (kept inline so page works without build) */
     .gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;padding:12px}
@@ -20,43 +20,29 @@
     .lightbox .prev{left:18px}
     .lightbox .next{right:18px}
     .caption{color:#fff;margin-top:8px;text-align:center;font-size:14px}
-    /* Back button */
-    .back-btn{display:inline-block;margin:10px 0;padding:8px 12px;background:#007bff;color:#fff;border-radius:4px;text-decoration:none;font-weight:600}
-    .back-btn:hover{background:#0056b3}
   </style>
 </head>
 <body>
   <header>
-    <img src="../images/logo.png" class="logo" alt="logo">
-    <div>
-      <h1 style="margin:0">Volejbalový Portal</h1>
-      <nav>
-        <a href="../index.html">Domov</a>
-        <a href="../about.html">O projekte</a>
-        <a href="../teams.html">Tímy & Štatistiky</a>
-        <a href="./">Galéria</a>
-        <a href="../contact.html">Kontakt</a>
-      </nav>
-    </div>
-    <a href="../index.html" class="back-btn" aria-label="Späť na úvod">← Späť na úvod</a>
+    <h1>Galéria</h1>
   </header>
 
-  <main class="container">
+  <main>
     <section class="gallery-grid" id="gallery">
-      <!-- Images referenced relative to site root -->
-      <div class="gallery-item"><img data-index="0" alt="101918" src="../101918.jpeg"></div>
-      <div class="gallery-item"><img data-index="1" alt="20250726" src="../20250726-pu-volej-svk-aut-3147683.jpg"></div>
-      <div class="gallery-item"><img data-index="2" alt="500073716" src="../500073716-1307765614054766-8047410534548081185-n.jpg"></div>
-      <div class="gallery-item"><img data-index="3" alt="beach vs indoor" src="../beach-volleyball-vs-indoor-volleyball-players.png"></div>
-      <div class="gallery-item"><img data-index="4" alt="extra" src="../extra.png"></div>
-      <div class="gallery-item"><img data-index="5" alt="images.webp" src="../images.webp"></div>
-      <div class="gallery-item"><img data-index="6" alt="jopia22" src="../jopia22.jpg"></div>
-      <div class="gallery-item"><img data-index="7" alt="kopia 11" src="../kopia%2011.jpg"></div>
-      <div class="gallery-item"><img data-index="8" alt="kopia 2" src="../kopia%202.jpg"></div>
-      <div class="gallery-item"><img data-index="9" alt="kopia" src="../kopia.jpg"></div>
-      <div class="gallery-item"><img data-index="10" alt="spike" src="../spike-1690x1080.jpg"></div>
-      <div class="gallery-item"><img data-index="11" alt="team canada" src="../team-canada-sara-pavan-melissa-humana-paredes-e1573671498498.webp"></div>
-      <div class="gallery-item"><img data-index="12" alt="volejbal" src="../volejbal_800x450.png"></div>
+      <!-- Images added from repository root -->
+      <div class="gallery-item"><img data-index="0" alt="101918" src="101918.jpeg"></div>
+      <div class="gallery-item"><img data-index="1" alt="20250726" src="20250726-pu-volej-svk-aut-3147683.jpg"></div>
+      <div class="gallery-item"><img data-index="2" alt="500073716" src="500073716-1307765614054766-8047410534548081185-n.jpg"></div>
+      <div class="gallery-item"><img data-index="3" alt="beach vs indoor" src="beach-volleyball-vs-indoor-volleyball-players.png"></div>
+      <div class="gallery-item"><img data-index="4" alt="extra" src="extra.png"></div>
+      <div class="gallery-item"><img data-index="5" alt="images.webp" src="images.webp"></div>
+      <div class="gallery-item"><img data-index="6" alt="jopia22" src="jopia22.jpg"></div>
+      <div class="gallery-item"><img data-index="7" alt="kopia 11" src="kopia%2011.jpg"></div>
+      <div class="gallery-item"><img data-index="8" alt="kopia 2" src="kopia%202.jpg"></div>
+      <div class="gallery-item"><img data-index="9" alt="kopia" src="kopia.jpg"></div>
+      <div class="gallery-item"><img data-index="10" alt="spike" src="spike-1690x1080.jpg"></div>
+      <div class="gallery-item"><img data-index="11" alt="team canada" src="team-canada-sara-pavan-melissa-humana-paredes-e1573671498498.webp"></div>
+      <div class="gallery-item"><img data-index="12" alt="volejbal" src="volejbal_800x450.png"></div>
     </section>
   </main>
 
@@ -69,7 +55,6 @@
     <div class="caption" id="lb-caption"></div>
   </div>
 
-  <script src="../script.js"></script>
   <script>
     (function(){
       const gallery = Array.from(document.querySelectorAll('.gallery-item img'));
@@ -105,6 +90,8 @@
         if(e.key==='ArrowRight') next();
         if(e.key==='ArrowLeft') prev();
       }});
+
+      // Lazy load small thumbs (optional): replace src with data-src if needed
     })();
   </script>
 </body>
