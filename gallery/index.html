@@ -1,2 +1,145 @@
+<!doctype html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Galéria - Volejbalový Portal</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    /* Gallery-specific styles (inline so funguje bez buildu) */
+    .gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;padding:12px}
+    .gallery-item{cursor:pointer;overflow:hidden;border-radius:6px;background:#f5f5f5}
+    .gallery-item img{width:100%;height:200px;object-fit:cover;display:block;transition:transform .25s}
+    .gallery-item:hover img{transform:scale(1.03)}
+    .back-btn{display:inline-block;margin:10px 0;padding:8px 12px;background:#007bff;color:#fff;border-radius:4px;text-decoration:none;font-weight:600}
+    .back-btn:hover{background:#0056b3}
+    .card{background:#fff;padding:16px;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,.06)}
+    main.container{padding:18px}
+    /* Lightbox */
+    .lightbox{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.85);z-index:9999}
+    .lightbox.open{display:flex}
+    .lightbox img{max-width:95%;max-height:85%;box-shadow:0 10px 30px rgba(0,0,0,.6)}
+    .lightbox .close{position:absolute;top:16px;right:20px;color:#fff;font-size:28px;cursor:pointer}
+    .lightbox .nav{position:absolute;top:50%;transform:translateY(-50%);color:#fff;font-size:40px;cursor:pointer;user-select:none}
+    .lightbox .prev{left:18px}
+    .lightbox .next{right:18px}
+    .caption{color:#fff;margin-top:8px;text-align:center;font-size:14px}
+  </style>
+</head>
+<body>
 
+<header style="display:flex;align-items:center;gap:12px;padding:12px 16px">
+  <img src="../images/logo.png" class="logo" alt="logo" style="height:48px">
+  <div style="flex:1">
+    <h1 style="margin:0">Volejbalový Portal</h1>
+    <nav style="margin-top:6px">
+      <a href="../index.html">Domov</a> |
+      <a href="../about.html">O projekte</a> |
+      <a href="../teams.html">Tímy & Štatistiky</a> |
+      <a href="./">Galéria</a> |
+      <a href="../contact.html">Kontakt</a>
+    </nav>
+  </div>
+  <!-- Tlačidlo Späť na úvod -->
+  <a href="../index.html" class="back-btn" aria-label="Späť na úvod">← Späť na úvod</a>
+</header>
+
+<main class="container">
+  <!-- About content included, ako na začiatku -->
+  <section class="card">
+    <h2>O projekte</h2>
+    <p>Volejbal je kolektívna športová hra, ktorú hrajú dve šesťčlenné družstvá na ihrisku rozdelenom sieťou. Cieľom hry je odbiť loptu ponad sieť do súperovho priestoru tak, aby ju súper nedokázal vrátiť.</p>
+    <h3>Druhy volejbalu</h3>
+    <ul>
+      <li>
+        Plážový volejbal (Beach Volleyball):
+        <p>Hrá sa dvaja proti dvom (2 hráči na tím) na piesku. Ihrisko je menšie ako halové (napr. 16 × 8 m). Zápasy sa často hrajú na 2 víťazné sety, a v prípade nerozhodného stavu sa hrá rozhodujúci set („tie-break\") do 15 bodov.</p>
+      </li>
+      <li>
+        Sitting Volleyball (sedený volejbal):
+        <p>Variant pre hráčov s telesným postihnutím. Hráči sedia počas hry na zemi. Má podobné pravidlá ako bežný volejbal, ale niektoré aspekty sú prispôsobené tak, aby sa dalo hrať v sede.</p>
+      </li>
+      <li>
+        Footvolley:
+        <p>Kombinuje prvky volejbalu a futbalu, hráči používajú nohy a pravidlá sú podobné beach volejbalu.</p>
+      </li>
+      <li>
+        Snow Volleyball:
+        <p>Volejbal sa hrá na snehovej ploche; tímy majú často 3 hráčov na stranu.</p>
+      </li>
+    </ul>
+    <h3>Použitá literatúra</h3>
+    <ol>
+      <li>https://slovakvolley.sk/</li>
+      <li>https://sk.wikipedia.org/wiki/Volejbal</li>
+      <li>https://spoludokazemevela.sk/nase-projekty/volejbal</li>
+    </ol>
+  </section>
+
+  <!-- Gallery grid (ako pôvodne) -->
+  <section class="gallery-grid" id="gallery" style="margin-top:18px">
+    <div class="gallery-item"><img data-index="0" alt="101918" src="../101918.jpeg"></div>
+    <div class="gallery-item"><img data-index="1" alt="20250726" src="../20250726-pu-volej-svk-aut-3147683.jpg"></div>
+    <div class="gallery-item"><img data-index="2" alt="500073716" src="../500073716-1307765614054766-8047410534548081185-n.jpg"></div>
+    <div class="gallery-item"><img data-index="3" alt="beach vs indoor" src="../beach-volleyball-vs-indoor-volleyball-players.png"></div>
+    <div class="gallery-item"><img data-index="4" alt="extra" src="../extra.png"></div>
+    <div class="gallery-item"><img data-index="5" alt="images.webp" src="../images.webp"></div>
+    <div class="gallery-item"><img data-index="6" alt="jopia22" src="../jopia22.jpg"></div>
+    <div class="gallery-item"><img data-index="7" alt="kopia 11" src="../kopia%2011.jpg"></div>
+    <div class="gallery-item"><img data-index="8" alt="kopia 2" src="../kopia%202.jpg"></div>
+    <div class="gallery-item"><img data-index="9" alt="kopia" src="../kopia.jpg"></div>
+    <div class="gallery-item"><img data-index="10" alt="spike" src="../spike-1690x1080.jpg"></div>
+    <div class="gallery-item"><img data-index="11" alt="team canada" src="../team-canada-sara-pavan-melissa-humana-paredes-e1573671498498.webp"></div>
+    <div class="gallery-item"><img data-index="12" alt="volejbal" src="../volejbal_800x450.png"></div>
+  </section>
+</main>
+
+<!-- Lightbox overlay -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+  <button class="close" id="lb-close" aria-label="Zavrieť">✕</button>
+  <div class="nav prev" id="lb-prev" aria-hidden="false">‹</div>
+  <img id="lb-img" src="" alt="" />
+  <div class="nav next" id="lb-next">›</div>
+  <div class="caption" id="lb-caption"></div>
+</div>
+
+<script>
+  (function(){
+    const gallery = Array.from(document.querySelectorAll('.gallery-item img'));
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lb-img');
+    const lbCaption = document.getElementById('lb-caption');
+    const closeBtn = document.getElementById('lb-close');
+    const prevBtn = document.getElementById('lb-prev');
+    const nextBtn = document.getElementById('lb-next');
+    let current = 0;
+
+    function open(index){
+      const img = gallery[index];
+      if(!img) return;
+      current = index;
+      lbImg.src = img.src;
+      lbImg.alt = img.alt || '';
+      lbCaption.textContent = img.alt || '';
+      lb.classList.add('open');
+      lb.setAttribute('aria-hidden','false');
+    }
+    function close(){ lb.classList.remove('open'); lb.setAttribute('aria-hidden','true'); }
+    function next(){ open((current+1)%gallery.length); }
+    function prev(){ open((current-1+gallery.length)%gallery.length); }
+
+    gallery.forEach((img,i)=> img.addEventListener('click',()=>open(i)));
+    closeBtn.addEventListener('click',close);
+    nextBtn.addEventListener('click',next);
+    prevBtn.addEventListener('click',prev);
+    lb.addEventListener('click',(e)=>{ if(e.target===lb) close(); });
+    document.addEventListener('keydown',(e)=>{ if(lb.classList.contains('open')){
+      if(e.key==='Escape') close();
+      if(e.key==='ArrowRight') next();
+      if(e.key==='ArrowLeft') prev();
+    }});
+  })();
+</script>
+</body>
+</html>
     
