@@ -1,76 +1,32 @@
-<!DOCTYPE html>
-<html lang="sk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plážový & Klasický Volejbal – Galéria</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: #0f0f0f;
-            color: #fff;
-            padding: 40px 20px;
-            line-height: 1.6;
-        }
-        h1 {
-            text-align: center;
-            margin-bottom: 50px;
-            font-size: 3rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            background: linear-gradient(90deg, #ff8a00, #da1b60);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 24px;
-            max-width: 1500px;
-            margin: 0 auto;
-        }
-        .gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
-            transition: all 0.4s ease;
-        }
-        .gallery img:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.9);
-        }
-        footer {
-            text-align: center;
-            margin-top: 80px;
-            padding: 30px;
-            color: #666;
-            font-size: 0.95rem;
-        }
-        @media (max-width: 600px) {
-            h1 { font-size: 2.2rem; }
-        }
-    </style>
-</head>
-<body>
-    <h1>Plážový &amp; Klasický Volejbal</h1>
+<!-- ======= ZAČIATOK VOLEJBALOVEJ GALÉRIE ======= -->
+<section style="padding: 60px 20px; background: #0f0f0f; color: #fff; text-align: center;">
+    <h2 style="font-size: 2.8rem; margin-bottom: 50px; background: linear-gradient(90deg, #ff8a00, #da1b60); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+        Plážový &amp; Klasický Volejbal – Galéria
+    </h2>
 
-    <div class="gallery">
-        <img src="https://i.imgur.com/0tR2j1l.jpeg" alt="Plážový volejbal">
-        <img src="https://i.imgur.com/9kP8L2m.jpeg" alt="Plážový volejbal">
-        <img src="https://i.imgur.com/3jR9pZk.jpeg" alt="Hala volejbal">
-        <img src="https://i.imgur.com/8mN5vXc.jpeg" alt="Hala volejbal čiernobielo">
-        <img src="https://i.imgur.com/4pL7qWs.jpeg" alt="Hala volejbal">
-        <img src="https://i.imgur.com/6hJ9kLm.jpeg" alt="Plážový volejbal farebne">
-        <img src="https://i.imgur.com/2vX8nYp.jpeg" alt="Ženský plážový volejbal">
-        <img src="https://i.imgur.com/1fG5hRt.jpeg" alt="Ženský plážový volejbal čiernobielo">
-        <img src="https://i.imgur.com/7bN3mKp.jpeg" alt="Plážový vs halový volejbal">
-        <img src="https://i.imgur.com/5cR4tYv.jpeg" alt="Ženský plážový volejbal akcia">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; max-width: 1500px; margin: 0 auto;">
+        <img src="https://i.imgur.com/0tR2j1l.jpeg" alt="Plážový volejbal" style="width:100%; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,0.7); transition:all .4s;">
+        <img src="https://i.imgur.com/9kP8L2m.jpeg" alt="Plážový volejbal" style="width:100%; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,0.7); transition:all .4s;">
+        <img src="https://i.imgur.com/3jR9pZk.jpeg" alt="Halový volejbal" style="width:100%; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,0.7); transition:all .4s;">
+        <img src="https://i.imgur.com/8mN5vXc.jpeg" alt="Halový volejbal čb" style="width:100%; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,0.7); transition:all .4s;">
+        <img src="https://i.imgur.com/4pL7qWs.jpeg" alt="Halový volejbal" style="width:100%; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,0.7); transition:all .4s;">
+        <img src="https://i.imgur.com/6hJ9kLm.jpeg" alt="Plážový volejbal" style="width:100%; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,0.7); transition:all .4s;">
+        <img src="https://i.imgur.com/2vX8nYp.jpeg" alt="Ženský beach" style="width:100%; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,0.7); transition:all .4s;">
+        <img src="https://i.imgur.com/1fG5hRt.jpeg" alt="Ženský beach čb" style="width:100%; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,0.7); transition:all .4s;">
+        <img src="https://i.imgur.com/7bN3mKp.jpeg" alt="Beach vs hala" style="width:100%; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,0.7); transition:all .4s;">
+        <img src="https://i.imgur.com/5cR4tYv.jpeg" alt="Ženský beach akcia" style="width:100%; borderR-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,0.7); transition:all .4s;">
     </div>
 
-    <footer>
-        © 2025 Volejbalová galéria – všetky práva vyhradené
-    </footer>
-</body>
-</html>
+    <p style="margin-top: 60px; color:#888; font-size:0.95rem;">
+        © 2025 Volejbalová galéria
+    </p>
+</section>
+
+<style>
+    /* Hover efekt na fotky (funguje všade) */
+    section img:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.9) !important;
+    }
+</style>
+<!-- ======= KONIEC VOLEJBALOVEJ GALÉRIE ======= -->
