@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galéria – Plážový & Halový Volejbal</title>
+    <style>
+        /* (ten istý štýl ako vyššie, len kompletne) */
+        body{margin:0;background:#0f0f0f;color:#fff;font-family:Arial,sans-serif;padding:40px 20px}
+        h1{font-size:3rem;margin-bottom:50px;background:linear-gradient(90deg,#ff8a00,#da1b60);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-align:center}
+        .g{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;max-width:1500px;margin:0 auto}
+        .g img{width:100%;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.7);transition:all .4s}
+        .g img:hover{transform:translateY(-10px) scale(1.02);box-shadow:0 20px 40px rgba(0,0,0,.9)}
+        footer{text-align:center;margin:80px 0 20px;color:#888}
+    </style>
+</head>
+<body>
+    <h1>Galéria – Volejbal</h1>
+    <div class="g">
+        <img src="https://i.imgur.com/0tR2j1l.jpeg" alt="">
+        <img src="https://i.imgur.com/9kP8L2m.jpeg" alt="">
+        <img src="https://i.imgur.com/3jR9pZk.jpeg" alt="">
+        <img src="https://i.imgur.com/8mN5vXc.jpeg" alt="">
+        <img src="https://i.imgur.com/4pL7qWs.jpeg" alt="">
+        <img src="https://i.imgur.com/6hJ9kLm.jpeg" alt="">
+        <img src="https://i.imgur.com/2vX8nYp.jpeg" alt="">
+        <img src="https://i.imgur.com/1fG5hRt.jpeg" alt="">
+        <img src="https://i.imgur.com/7bN3mKp.jpeg" alt="">
+        <img src="https://i.imgur.com/5cR4tYv.jpeg" alt="">
+    </div>
+    <footer>© 2025 Volejbalová galéria</footer>
+</body>
+</html>
