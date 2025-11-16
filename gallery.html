@@ -3,21 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Galéria - Volejbalový Portal</title>
+  <title>Galéria - Volejbal</title>
   <link rel="stylesheet" href="../styles.css" />
   <style>
-    /* Layout */
-    .section-title{margin:16px 12px;font-size:1.2rem;font-weight:700}
-    .gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;padding:12px}
-    figure.thumb{margin:0;background:#fff;border-radius:6px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.08);text-align:center}
-    figure.thumb img{width:100%;height:140px;object-fit:cover;display:block;cursor:pointer}
-    figure.thumb figcaption{padding:8px;font-size:0.9rem;color:#333}
-    .pair-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:12px}
-    .pair-item{display:flex;flex-direction:column;gap:6px}
-    .note{padding:0 12px 12px 12px;color:#555;font-size:0.95rem}
-    /* Buttons */
-    .back-btn{display:inline-block;margin:10px 0;padding:8px 12px;background:#007bff;color:#fff;border-radius:4px;text-decoration:none;font-weight:600}
-    .back-btn:hover{background:#0056b3}
+    /* Small gallery-specific tweaks (kept inline so page works without build) */
+    .gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;padding:12px}
+    .gallery-item{cursor:pointer;overflow:hidden;border-radius:6px;background:#f5f5f5}
+    .gallery-item img{width:100%;height:200px;object-fit:cover;display:block;transition:transform .25s}
+    .gallery-item:hover img{transform:scale(1.03)}
     /* Lightbox */
     .lightbox{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.85);z-index:9999}
     .lightbox.open{display:flex}
@@ -27,20 +20,21 @@
     .lightbox .prev{left:18px}
     .lightbox .next{right:18px}
     .caption{color:#fff;margin-top:8px;text-align:center;font-size:14px}
-    /* Small helpers for edited thumbs label */
-    .label-small{font-size:0.8rem;color:#666}
+    /* Back button */
+    .back-btn{display:inline-block;margin:10px 0;padding:8px 12px;background:#007bff;color:#fff;border-radius:4px;text-decoration:none;font-weight:600}
+    .back-btn:hover{background:#0056b3}
   </style>
 </head>
 <body>
-  <header style="display:flex;align-items:center;gap:12px;padding:12px 16px">
-    <img src="../images/logo.png" class="logo" alt="logo" style="height:48px">
-    <div style="flex:1">
-      <h1 style="margin:0">Volejbalový Portal — Galéria</h1>
-      <nav style="margin-top:6px">
-        <a href="../index.html">Domov</a> |
-        <a href="../about.html">O projekte</a> |
-        <a href="../teams.html">Tímy & Štatistiky</a> |
-        <a href="./">Galéria</a> |
+  <header>
+    <img src="../images/logo.png" class="logo" alt="logo">
+    <div>
+      <h1 style="margin:0">Volejbalový Portal</h1>
+      <nav>
+        <a href="../index.html">Domov</a>
+        <a href="../about.html">O projekte</a>
+        <a href="../teams.html">Tímy & Štatistiky</a>
+        <a href="./">Galéria</a>
         <a href="../contact.html">Kontakt</a>
       </nav>
     </div>
@@ -48,84 +42,22 @@
   </header>
 
   <main class="container">
-
-    <!-- Main gallery: minimálne 5 obrázkov -->
-    <h2 class="section-title">Galéria obrázkov (minimálne 5)</h2>
-    <p class="note">Nižšie je päť hlavných obrázkov. Okrem nich sa na stránke nachádzajú aj páry originál/upravený (sekcie nižšie).</p>
-    <section class="gallery-grid" id="main-gallery">
-      <figure class="thumb">
-        <img src="../101918.jpeg" alt="101918" data-filter="" data-caption="101918 — zápas" />
-        <figcaption>101918 — zápas</figcaption>
-      </figure>
-      <figure class="thumb">
-        <img src="../jopia22.jpg" alt="jopia22" data-filter="" data-caption="Jopia22 — akcia" />
-        <figcaption>Jopia22 — akcia</figcaption>
-      </figure>
-      <figure class="thumb">
-        <img src="../spike-1690x1080.jpg" alt="spike" data-filter="" data-caption="Spike — útok" />
-        <figcaption>Spike — útok</figcaption>
-      </figure>
-      <figure class="thumb">
-        <img src="../team-canada-sara-pavan-melissa-humana-paredes-e1573671498498.webp" alt="team canada" data-filter="" data-caption="Team Canada — duo" />
-        <figcaption>Team Canada — duo</figcaption>
-      </figure>
-      <figure class="thumb">
-        <img src="../volejbal_800x450.png" alt="volejbal" data-filter="" data-caption="Volejbal — banner" />
-        <figcaption>Volejbal — banner</figcaption>
-      </figure>
+    <section class="gallery-grid" id="gallery">
+      <!-- Images referenced relative to site root -->
+      <div class="gallery-item"><img data-index="0" alt="101918" src="../101918.jpeg"></div>
+      <div class="gallery-item"><img data-index="1" alt="20250726" src="../20250726-pu-volej-svk-aut-3147683.jpg"></div>
+      <div class="gallery-item"><img data-index="2" alt="500073716" src="../500073716-1307765614054766-8047410534548081185-n.jpg"></div>
+      <div class="gallery-item"><img data-index="3" alt="beach vs indoor" src="../beach-volleyball-vs-indoor-volleyball-players.png"></div>
+      <div class="gallery-item"><img data-index="4" alt="extra" src="../extra.png"></div>
+      <div class="gallery-item"><img data-index="5" alt="images.webp" src="../images.webp"></div>
+      <div class="gallery-item"><img data-index="6" alt="jopia22" src="../jopia22.jpg"></div>
+      <div class="gallery-item"><img data-index="7" alt="kopia 11" src="../kopia%2011.jpg"></div>
+      <div class="gallery-item"><img data-index="8" alt="kopia 2" src="../kopia%202.jpg"></div>
+      <div class="gallery-item"><img data-index="9" alt="kopia" src="../kopia.jpg"></div>
+      <div class="gallery-item"><img data-index="10" alt="spike" src="../spike-1690x1080.jpg"></div>
+      <div class="gallery-item"><img data-index="11" alt="team canada" src="../team-canada-sara-pavan-melissa-humana-paredes-e1573671498498.webp"></div>
+      <div class="gallery-item"><img data-index="12" alt="volejbal" src="../volejbal_800x450.png"></div>
     </section>
-
-    <!-- Efekty: 2x obrázky upravené pomocou efektov (každý pár: originál + upravený) -->
-    <h2 class="section-title">Efekty (originál + upravený)</h2>
-    <p class="note">Tu sú 2 obrázky, každý má originál a upravenú verziu (upravená verzia je na stránke zobrazená pomocou CSS efektu; po kliknutí sa vo lightboxe zobrazí upravená verzia).</p>
-    <section class="pair-grid" id="effects-section">
-      <!-- Pair 1 -->
-      <div class="pair-item">
-        <figure class="thumb">
-          <img src="../jopia22.jpg" alt="Jopia22 originál" data-filter="" data-caption="Jopia22 — originál" />
-          <figcaption>Jopia22 — originál</figcaption>
-        </figure>
-        <figure class="thumb">
-          <!-- upravená verzia: napr. silný sepia + kontrast -->
-          <img src="../jopia22.jpg" alt="Jopia22 efekt (sepia+contrast)" class="edited" data-filter="sepia(0.6) contrast(1.2) saturate(1.1)" data-caption="Jopia22 — efekt: sepia + contrast" />
-          <figcaption>Jopia22 — upravené (sepia + kontrast) <div class="label-small">originál + upravené</div></figcaption>
-        </figure>
-      </div>
-
-      <!-- Pair 2 -->
-      <div class="pair-item">
-        <figure class="thumb">
-          <img src="../spike-1690x1080.jpg" alt="Spike originál" data-filter="" data-caption="Spike — originál" />
-          <figcaption>Spike — originál</figcaption>
-        </figure>
-        <figure class="thumb">
-          <!-- upravená verzia: napr. grayscale + blur/soft -->
-          <img src="../spike-1690x1080.jpg" alt="Spike efekt (grayscale+brightness)" class="edited" data-filter="grayscale(1) brightness(0.95) contrast(1.05)" data-caption="Spike — efekt: grayscale + brightness" />
-          <figcaption>Spike — upravené (grayscale + brightness) <div class="label-small">originál + upravené</div></figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <!-- Úprava farieb: originál + upravený (RGB/kontrast/gamma) -->
-    <h2 class="section-title">Úprava farieb (originál + upravený)</h2>
-    <p class="note">Ukážka jednej úpravy farieb (napr. zvýšenie saturácie + úprava gama/kontrastu). Originál a upravená verzia sú vedľa seba.</p>
-    <section class="pair-grid" id="color-section">
-      <div class="pair-item">
-        <figure class="thumb">
-          <img src="../team-canada-sara-pavan-melissa-humana-paredes-e1573671498498.webp" alt="Team Canada originál" data-filter="" data-caption="Team Canada — originál" />
-          <figcaption>Team Canada — originál</figcaption>
-        </figure>
-      </div>
-      <div class="pair-item">
-        <figure class="thumb">
-          <!-- upravená farba: hudge rotate + saturate + contrast -->
-          <img src="../team-canada-sara-pavan-melissa-humana-paredes-e1573671498498.webp" alt="Team Canada farebne upravené" class="edited" data-filter="hue-rotate(15deg) saturate(1.4) contrast(1.1) brightness(1.03)" data-caption="Team Canada — úprava farieb" />
-          <figcaption>Team Canada — upravené (hue + saturate + contrast) <div class="label-small">originál + upravené</div></figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <p class="note">Ďalšie obrázky, ktoré sú na stránke: extra.png, kopia.jpg, kopia 2.jpg, kopia 11.jpg, images.webp a ďalšie — sú dostupné v galérii/zdrojovom adresári.</p>
   </main>
 
   <!-- Lightbox overlay -->
@@ -140,41 +72,30 @@
   <script src="../script.js"></script>
   <script>
     (function(){
-      // thumbnails: any img with data-caption
-      const thumbs = Array.from(document.querySelectorAll('img[data-caption]'));
+      const gallery = Array.from(document.querySelectorAll('.gallery-item img'));
       const lb = document.getElementById('lightbox');
       const lbImg = document.getElementById('lb-img');
       const lbCaption = document.getElementById('lb-caption');
       const closeBtn = document.getElementById('lb-close');
       const prevBtn = document.getElementById('lb-prev');
       const nextBtn = document.getElementById('lb-next');
-
-      // Build an ordered list of images visible on the page to allow prev/next navigation.
-      // We use the thumbs array order.
-      let gallery = thumbs;
       let current = 0;
 
       function open(index){
         const img = gallery[index];
         if(!img) return;
         current = index;
-        // use same src as thumbnail but if thumbnail has data-filter, apply it to large image
         lbImg.src = img.src;
-        // apply filter if present (for edited previews)
-        const filter = img.dataset.filter || '';
-        lbImg.style.filter = filter;
         lbImg.alt = img.alt || '';
-        lbCaption.textContent = img.dataset.caption || '';
+        lbCaption.textContent = img.alt || '';
         lb.classList.add('open');
         lb.setAttribute('aria-hidden','false');
       }
-      function close(){ lb.classList.remove('open'); lb.setAttribute('aria-hidden','true'); lbImg.style.filter = ''; }
+      function close(){ lb.classList.remove('open'); lb.setAttribute('aria-hidden','true'); }
       function next(){ open((current+1)%gallery.length); }
       function prev(){ open((current-1+gallery.length)%gallery.length); }
 
-      // Clicking thumbnails opens lightbox with matching filter if any
-      thumbs.forEach((img,i)=> img.addEventListener('click',()=> open(i)));
-
+      gallery.forEach((img,i)=> img.addEventListener('click',()=>open(i)));
       closeBtn.addEventListener('click',close);
       nextBtn.addEventListener('click',next);
       prevBtn.addEventListener('click',prev);
