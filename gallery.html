@@ -1,104 +1,72 @@
-<!doctype html>
-<html lang="sk"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Galéria</title><link rel="stylesheet" href="styles.css"></head><body>
-
-<header>
-  <img src="images/logo.png" class="logo" alt="logo">
-  <div>
-    <h1 style="margin:0">Volejbalový Portal</h1>
-    <nav>
-      <a href="index.html">Domov</a>
-      <a href="about.html">O projekte</a>
-      <a href="teams.html">Tímy & Štatistiky</a>
-      <a href="gallery.html">Galéria</a>
-      <a href="contact.html">Kontakt</a>
-    </nav>
-  </div>
-</header>
-
-<main class="container">
-  <section class="card">
-    <h2>Galéria obrázkov</h2>
-    <p>Funkčná galéria: kliknite na miniatúru, aby sa zobrazil veľký obrázok v okne.</p>
-    <div class="gallery">
-      <img class="thumb" src="images/color_adjusted.jpg" data-large="images/color_adjusted.jpg" alt="color_adjusted.jpg">\n<img class="thumb" src="images/color_orig.jpg" data-large="images/color_orig.jpg" alt="color_orig.jpg">\n<img class="thumb" src="images/effect_edited_1.jpg" data-large="images/effect_edited_1.jpg" alt="effect_edited_1.jpg">\n<img class="thumb" src="images/effect_edited_2.jpg" data-large="images/effect_edited_2.jpg" alt="effect_edited_2.jpg">\n<img class="thumb" src="images/effect_orig_1.jpg" data-large="images/effect_orig_1.jpg" alt="effect_orig_1.jpg">\n<img class="thumb" src="images/effect_orig_2.jpg" data-large="images/effect_orig_2.jpg" alt="effect_orig_2.jpg">\n<img class="thumb" src="images/gallery_1.jpg" data-large="images/gallery_1.jpg" alt="gallery_1.jpg">\n<img class="thumb" src="images/gallery_2.jpg" data-large="images/gallery_2.jpg" alt="gallery_2.jpg">\n<img class="thumb" src="images/gallery_3.jpg" data-large="images/gallery_3.jpg" alt="gallery_3.jpg">\n<img class="thumb" src="images/gallery_4.jpg" data-large="images/gallery_4.jpg" alt="gallery_4.jpg">\n<img class="thumb" src="images/gallery_5.jpg" data-large="images/gallery_5.jpg" alt="gallery_5.jpg">\n<img class="thumb" src="images/logo.png" data-large="images/logo.png" alt="logo.png">\n
-    </div>
-    <div id="modal" class="modal"><img id="modal-img" src=""><button id="close-modal" style="position:fixed;top:20px;right:24px;padding:8px 12px;border-radius:6px;">Zavrieť</button></div>
-    <h3>Úpravy obrázkov</h3>
-    <p>Nižšie sú zobrazené originály upravovaných obrázkov a ich upravené verzie.</p>
-    <h4>Efekty (orig. + efekt)</h4>
-    <div style="display:flex;gap:10px;flex-wrap:wrap;">
-<div style="width:260px"><img src="images/effect_orig_1.jpg" style="width:100%;height:140px;object-fit:cover"><p style="margin:6px 0 2px">Originál: effect_orig_1.jpg</p></div><div style="width:260px"><img src="images/effect_edited_1.jpg" style="width:100%;height:140px;object-fit:cover"><p style="margin:6px 0 2px">Upravené: effect_edited_1.jpg</p></div><div style="width:260px"><img src="images/effect_orig_2.jpg" style="width:100%;height:140px;object-fit:cover"><p style="margin:6px 0 2px">Originál: effect_orig_2.jpg</p></div><div style="width:260px"><img src="images/effect_edited_2.jpg" style="width:100%;height:140px;object-fit:cover"><p style="margin:6px 0 2px">Upravené: effect_edited_2.jpg</p></div></div><h4>Farebné úpravy (orig. + upravené)</h4><div style="display:flex;gap:10px;flex-wrap:wrap;"><div style="width:260px"><img src="images/color_orig.jpg" style="width:100%;height:140px;object-fit:cover"><p>Originál: color_orig.jpg</p></div><div style="width:260px"><img src="images/color_adjusted.jpg" style="width:100%;height:140px;object-fit:cover"><p>Upravené: color_adjusted.jpg</p></div>
-    </div>
-  </section>
-</main>
-
-<footer class="footer">
-  &copy; 2025 Volejbalový Portal — všetky práva vyhradené.
-</footer>
-<script src="script.js"></script></body></html>
 <!DOCTYPE html>
 <html lang="sk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plážový volejbal – Galéria</title>
+    <title>Plážový & Klasický Volejbal – Galéria</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: Arial, sans-serif;
-            background: #111;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #0f0f0f;
             color: #fff;
             padding: 40px 20px;
+            line-height: 1.6;
         }
         h1 {
             text-align: center;
-            margin-bottom: 40px;
-            font-size: 2.8rem;
+            margin-bottom: 50px;
+            font-size: 3rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
+            background: linear-gradient(90deg, #ff8a00, #da1b60);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 20px;
-            max-width: 1400px;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 24px;
+            max-width: 1500px;
             margin: 0 auto;
         }
         .gallery img {
             width: 100%;
             height: auto;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.6);
-            transition: transform 0.4s, box-shadow 0.4s;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+            transition: all 0.4s ease;
         }
         .gallery img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.8);
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.9);
         }
         footer {
             text-align: center;
-            margin-top: 60px;
-            padding: 20px;
-            font-size: 0.9rem;
+            margin-top: 80px;
+            padding: 30px;
             color: #666;
+            font-size: 0.95rem;
+        }
+        @media (max-width: 600px) {
+            h1 { font-size: 2.2rem; }
         }
     </style>
 </head>
 <body>
-    <h1>Plážový & Klasický Volejbal – Galéria</h1>
+    <h1>Plážový &amp; Klasický Volejbal</h1>
 
     <div class="gallery">
-        <img src="https://i.imgur.com/0tR2j1l.jpeg" alt="Beach volleyball">
-        <img src="https://i.imgur.com/9kP8L2m.jpeg" alt="Beach volleyball">
-        <img src="https://i.imgur.com/3jR9pZk.jpeg" alt="Indoor volleyball">
-        <img src="https://i.imgur.com/8mN5vXc.jpeg" alt="Indoor volleyball B&W">
-        <img src="https://i.imgur.com/4pL7qWs.jpeg" alt="Indoor volleyball">
-        <img src="https://i.imgur.com/6hJ9kLm.jpeg" alt="Beach volleyball stylized">
-        <img src="https://i.imgur.com/2vX8nYp.jpeg" alt="Beach volleyball women">
-        <img src="https://i.imgur.com/1fG5hRt.jpeg" alt="Beach volleyball women B&W">
-        <img src="https://i.imgur.com/7bN3mKp.jpeg" alt="Beach vs Indoor split">
-        <img src="https://i.imgur.com/5cR4tYv.jpeg" alt="Beach volleyball women action">
+        <img src="https://i.imgur.com/0tR2j1l.jpeg" alt="Plážový volejbal">
+        <img src="https://i.imgur.com/9kP8L2m.jpeg" alt="Plážový volejbal">
+        <img src="https://i.imgur.com/3jR9pZk.jpeg" alt="Hala volejbal">
+        <img src="https://i.imgur.com/8mN5vXc.jpeg" alt="Hala volejbal čiernobielo">
+        <img src="https://i.imgur.com/4pL7qWs.jpeg" alt="Hala volejbal">
+        <img src="https://i.imgur.com/6hJ9kLm.jpeg" alt="Plážový volejbal farebne">
+        <img src="https://i.imgur.com/2vX8nYp.jpeg" alt="Ženský plážový volejbal">
+        <img src="https://i.imgur.com/1fG5hRt.jpeg" alt="Ženský plážový volejbal čiernobielo">
+        <img src="https://i.imgur.com/7bN3mKp.jpeg" alt="Plážový vs halový volejbal">
+        <img src="https://i.imgur.com/5cR4tYv.jpeg" alt="Ženský plážový volejbal akcia">
     </div>
 
     <footer>
