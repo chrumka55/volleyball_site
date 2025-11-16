@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="sk"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Galéria</title><link rel="stylesheet" href="styles.css"></head><body>
+
+<header>
+  <img src="images/logo.png" class="logo" alt="logo">
+  <div>
+    <h1 style="margin:0">Volejbalový Portal</h1>
+    <nav>
+      <a href="index.html">Domov</a>
+      <a href="about.html">O projekte</a>
+      <a href="teams.html">Tímy & Štatistiky</a>
+      <a href="gallery.html">Galéria</a>
+      <a href="contact.html">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="card">
+    <h2>Galéria obrázkov</h2>
+    <p>Funkčná galéria: kliknite na miniatúru, aby sa zobrazil veľký obrázok v okne.</p>
+    <div class="gallery">
+      <img class="thumb" src="images/color_adjusted.jpg" data-large="images/color_adjusted.jpg" alt="color_adjusted.jpg">\n<img class="thumb" src="images/color_orig.jpg" data-large="images/color_orig.jpg" alt="color_orig.jpg">\n<img class="thumb" src="images/effect_edited_1.jpg" data-large="images/effect_edited_1.jpg" alt="effect_edited_1.jpg">\n<img class="thumb" src="images/effect_edited_2.jpg" data-large="images/effect_edited_2.jpg" alt="effect_edited_2.jpg">\n<img class="thumb" src="images/effect_orig_1.jpg" data-large="images/effect_orig_1.jpg" alt="effect_orig_1.jpg">\n<img class="thumb" src="images/effect_orig_2.jpg" data-large="images/effect_orig_2.jpg" alt="effect_orig_2.jpg">\n<img class="thumb" src="images/gallery_1.jpg" data-large="images/gallery_1.jpg" alt="gallery_1.jpg">\n<img class="thumb" src="images/gallery_2.jpg" data-large="images/gallery_2.jpg" alt="gallery_2.jpg">\n<img class="thumb" src="images/gallery_3.jpg" data-large="images/gallery_3.jpg" alt="gallery_3.jpg">\n<img class="thumb" src="images/gallery_4.jpg" data-large="images/gallery_4.jpg" alt="gallery_4.jpg">\n<img class="thumb" src="images/gallery_5.jpg" data-large="images/gallery_5.jpg" alt="gallery_5.jpg">\n<img class="thumb" src="images/logo.png" data-large="images/logo.png" alt="logo.png">\n
+    </div>
+    <div id="modal" class="modal"><img id="modal-img" src=""><button id="close-modal" style="position:fixed;top:20px;right:24px;padding:8px 12px;border-radius:6px;">Zavrieť</button></div>
+    <h3>Úpravy obrázkov</h3>
+    <p>Nižšie sú zobrazené originály upravovaných obrázkov a ich upravené verzie.</p>
+    <h4>Efekty (orig. + efekt)</h4>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;">
+<div style="width:260px"><img src="images/effect_orig_1.jpg" style="width:100%;height:140px;object-fit:cover"><p style="margin:6px 0 2px">Originál: effect_orig_1.jpg</p></div><div style="width:260px"><img src="images/effect_edited_1.jpg" style="width:100%;height:140px;object-fit:cover"><p style="margin:6px 0 2px">Upravené: effect_edited_1.jpg</p></div><div style="width:260px"><img src="images/effect_orig_2.jpg" style="width:100%;height:140px;object-fit:cover"><p style="margin:6px 0 2px">Originál: effect_orig_2.jpg</p></div><div style="width:260px"><img src="images/effect_edited_2.jpg" style="width:100%;height:140px;object-fit:cover"><p style="margin:6px 0 2px">Upravené: effect_edited_2.jpg</p></div></div><h4>Farebné úpravy (orig. + upravené)</h4><div style="display:flex;gap:10px;flex-wrap:wrap;"><div style="width:260px"><img src="images/color_orig.jpg" style="width:100%;height:140px;object-fit:cover"><p>Originál: color_orig.jpg</p></div><div style="width:260px"><img src="images/color_adjusted.jpg" style="width:100%;height:140px;object-fit:cover"><p>Upravené: color_adjusted.jpg</p></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  &copy; 2025 Volejbalový Portal — všetky práva vyhradené.
+</footer>
+<script src="script.js"></script></body></html>

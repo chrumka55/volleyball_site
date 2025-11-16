@@ -1,0 +1,17 @@
+
+:root{--accent:#ff8c00;--bg:#f7fbff;--card:#fff;--text:#123;}
+body{font-family: Arial, sans-serif; margin:0; background:var(--bg); color:var(--text);}
+header{background:linear-gradient(90deg,#0aa,#06f); color:white; padding:18px 24px; display:flex; align-items:center; gap:12px;}
+header img.logo{width:64px; height:64px; border-radius:8px; border:2px solid rgba(255,255,255,0.3);}
+nav a{color:white; margin-right:12px; text-decoration:none; font-weight:600;}
+.container{max-width:1100px; margin:28px auto; padding:0 18px;}
+.card{background:var(--card); padding:18px; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.06);}
+.gallery{display:flex; flex-wrap:wrap; gap:10px;}
+.thumb{width:180px; height:120px; object-fit:cover; cursor:pointer; border-radius:6px; box-shadow:0 4px 10px rgba(0,0,0,0.08);}
+.modal{position:fixed; inset:0; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,0.6);}
+.modal img{max-width:90%; max-height:90%; border-radius:6px;}
+.footer{padding:14px; text-align:center; color:#444;}
+.table{width:100%; border-collapse:collapse;}
+.table th, .table td{border:1px solid #ddd; padding:8px;}
+.btn{background:var(--accent); color:white; padding:10px 14px; border-radius:8px; text-decoration:none; display:inline-block;}
+aside.links a{display:block; margin-bottom:6px; color:var(--accent); text-decoration:none;}
